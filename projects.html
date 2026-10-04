@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Luo Hongsen</title>
+  <meta name="description" content="Engineering projects by Luo Hongsen — robotics, agent systems, and AI for Science.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="wordmark" href="index.html">Luo<em>&middot;</em>Hongsen</a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cv.html">CV</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="research.html">Research</a>
+        <a href="notes.html">Notes</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+
+      <p class="section-label">Projects</p>
+      <h1>Things I've built.</h1>
+      <p class="page-intro">
+        I like building things end-to-end — the case studies below are written to show
+        problems, decisions, and results, not just tech stacks.
+        <!-- TODO: 每个项目的内容都可以继续扩写;图片放到 assets/img/ 后替换占位框 -->
+      </p>
+
+      <!-- ============ SciFlow-107 ============ -->
+      <article class="project" id="sciflow">
+        <div class="project-header">
+          <span class="tag">Agent &middot; HPC &middot; 2026</span>
+          <h2>SciFlow-107</h2>
+          <p class="project-sub">Slurm job-script generation agent — natural language in, validated experiment pipelines out.</p>
+        </div>
+
+        <div class="flow">
+          natural language <span class="arr">&rarr;</span> ExperimentSpec <span class="arr">&rarr;</span> experiment matrix <span class="arr">&rarr;</span> sbatch <span class="arr">&rarr;</span> validation
+        </div>
+
+        <h3>Problem</h3>
+        <p>
+          Undergraduate students using HPC clusters have to understand Slurm, resource
+          requests, and script syntax before running their very first experiment.
+          <!-- TODO: 补充你在 107杯 参赛过程中的真实动机和数据 -->
+        </p>
+
+        <h3>Approach</h3>
+        <p>
+          The LLM is responsible for what it's good at — natural-language parsing and
+          experiment specification. A deterministic system does the rest: Cartesian
+          product expansion, script generation, and static validation.
+        </p>
+
+        <h3>Architecture</h3>
+        <!-- TODO: 画一张架构图(可以用 excalidraw/draw.io),导出 PNG 放到 assets/img/sciflow-arch.png 并替换下面的占位框 -->
+        <div class="ph" style="min-height: 180px;">architecture diagram placeholder<br>drop image at assets/img/sciflow-arch.png</div>
+
+        <h3>Result</h3>
+        <p><strong>USTC 107 Cup — Graduate Group First Prize.</strong></p>
+
+        <div class="tags">
+          <span>FastAPI</span><span>LangGraph</span><span>Pydantic</span><span>React</span><span>TypeScript</span><span>Docker</span><span>Slurm</span>
+        </div>
+
+        <div class="project-links">
+          <!-- TODO: 填入真实链接后把 .todo 的 span 换成 <a> -->
+          <span class="todo">GitHub &rarr;</span>
+          <span class="todo">Demo &rarr;</span>
+          <span class="todo">Design document &rarr;</span>
+        </div>
+      </article>
+
+      <hr class="rule">
+
+      <!-- ============ RoboGame ============ -->
+      <article class="project" id="robogame">
+        <div class="project-header">
+          <span class="tag">Robotics &middot; Vision &middot; 2026</span>
+          <h2>RoboGame</h2>
+          <p class="project-sub">Building an autonomous mecanum-wheel robot from scratch.</p>
+        </div>
+
+        <div class="diagram">camera
+    <b>&darr;</b>
+vision  (white balance &middot; gamma &middot; HSV &middot; morphology)
+    <b>&darr;</b>
+AprilTag / block detection
+    <b>&darr;</b>
+localization  (PnP &middot; camera-to-world)
+    <b>&darr;</b>
+path planning
+    <b>&darr;</b>
+motor control  (STM32 &middot; USART)
+    <b>&darr;</b>
+robot</div>
+
+        <h3>What I did</h3>
+        <p>
+          Led perception and control in a 5-member team: an OpenCV pipeline with
+          white balance, gamma correction, HSV segmentation, binary morphology,
+          geometric corner extraction and PnP-based 3D localization; camera-to-world
+          coordinate transforms; and the USART protocol between the Python upper
+          computer and the STM32 controller.
+        </p>
+
+        <h3>Photos</h3>
+        <!-- TODO: 把机器人实物照片放到 assets/img/,文件名对应替换:
+             robogame-1.jpg = 整车 / 比赛现场, robogame-2.jpg = 视觉pipeline效果或电控 -->
+        <div class="ph-grid">
+          <div class="ph" style="min-height: 200px;">robot photo placeholder<br>assets/img/robogame-1.jpg</div>
+          <div class="ph" style="min-height: 200px;">vision pipeline / electronics placeholder<br>assets/img/robogame-2.jpg</div>
+        </div>
+
+        <div class="tags">
+          <span>OpenCV</span><span>AprilTag</span><span>PnP</span><span>Python</span><span>STM32</span><span>USART</span><span>Mecanum wheels</span>
+        </div>
+
+        <div class="project-links">
+          <span class="todo">GitHub &rarr;</span>
+          <span class="todo">Competition report &rarr;</span>
+        </div>
+      </article>
+
+      <hr class="rule">
+
+      <!-- ============ VASP Router / SkillForge ============ -->
+      <article class="project" id="vasp-router">
+        <div class="project-header">
+          <span class="tag">AI for Science &middot; Agents &middot; 2026</span>
+          <h2>VASP Router / SkillForge</h2>
+          <p class="project-sub">Teaching agents how to use scientific software.</p>
+        </div>
+
+        <div class="diagram">scientific knowledge
+        <b>&darr;</b>
+knowledge graph
+        <b>&darr;</b>
+skill routing
+        <b>&darr;</b>
+VASP workflow
+        <b>&darr;</b>
+simulation</div>
+
+        <p>
+          I explored how LLM agents can interact with domain-specific scientific
+          software through structured skills, routing, and verification. The system
+          maps natural-language computational-materials requests onto VASP workflows,
+          with parameters validated against a knowledge graph derived from the VASP
+          wiki — 933 nodes and 10,530 indexed terms, retrieved with a Python/SQLite
+          pipeline (spelling correction, abbreviation expansion, stemming,
+          BM25/IDF weighting, graph-based enhancement).
+        </p>
+        <p>
+          End-to-end execution was validated on representative tasks, including
+          silicon and graphene calculations.
+          <!-- TODO: 补充 SkillForge 部分的介绍,以及你对这个方向的思考(可以链接到 Research 页) -->
+        </p>
+
+        <div class="tags">
+          <span>Python</span><span>SQLite</span><span>BM25/IDF</span><span>pymatgen</span><span>VASP</span><span>Knowledge Graph</span><span>LLM Agents</span>
+        </div>
+
+        <div class="project-links">
+          <span class="todo">GitHub &rarr;</span>
+          <span class="todo">Report &rarr;</span>
+        </div>
+      </article>
+
+      <hr class="rule">
+
+      <!-- ============ AI Mock Interviewer ============ -->
+      <article class="project" id="interviewer">
+        <div class="project-header">
+          <span class="tag">LLM &middot; Speech &middot; 2026</span>
+          <h2>AI Mock Interviewer</h2>
+          <p class="project-sub">A research-group interview simulator that responds in under two seconds.</p>
+        </div>
+
+        <div class="flow">
+          ASR <span class="arr">&rarr;</span> streaming LLM <span class="arr">&rarr;</span> parallel TTS <span class="arr">&rarr;</span> ordered playback
+        </div>
+
+        <p>
+          Led backend development of an AI mock-interview system (FastAPI, async
+          Python, LLMs, ASR/TTS, RAG) that simulates research-group interviews.
+          By restructuring the speech pipeline into parallel stages with ordered
+          playback, worst-case first-response latency dropped from ~30s to under 2s.
+        </p>
+        <p>
+          Designed a structured evaluation framework across 5 weighted dimensions —
+          generating evidence, risk flags, improvement plans, follow-up questions,
+          and machine-readable JSON reports.
+        </p>
+
+        <h3>Result</h3>
+        <p><strong>3rd place, USTC division — national finals (5/30 teams).</strong></p>
+
+        <div class="tags">
+          <span>FastAPI</span><span>asyncio</span><span>LLM</span><span>RAG</span><span>ASR / TTS</span><span>ModelScope &times; Datawhale</span>
+        </div>
+
+        <div class="project-links">
+          <span class="todo">GitHub &rarr;</span>
+          <span class="todo">Demo &rarr;</span>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; 2026 Luo Hongsen &middot; Hefei, China</span>
+      <nav class="foot-nav">
+        <a href="mailto:jasonluohs@mail.ustc.edu.cn">Email</a>
+        <a href="https://github.com/jasonluohs" target="_blank" rel="noopener">GitHub</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

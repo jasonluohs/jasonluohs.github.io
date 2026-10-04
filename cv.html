@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV — Luo Hongsen</title>
+  <meta name="description" content="Curriculum Vitae of Luo Hongsen — undergraduate at USTC, School of the Gifted Young.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="wordmark" href="index.html">Luo<em>&middot;</em>Hongsen</a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cv.html" class="active">CV</a>
+        <a href="projects.html">Projects</a>
+        <a href="research.html">Research</a>
+        <a href="notes.html">Notes</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+
+      <p class="section-label">Curriculum Vitae</p>
+      <h1>CV</h1>
+      <p class="cv-meta">
+        Last updated: October 2026 &middot;
+        <!-- TODO: 导出 resume.tex 为 PDF 后放到 assets/cv.pdf,然后取消下面注释
+             <a href="assets/cv.pdf">Download PDF &rarr;</a> -->
+        <span class="dim">PDF version coming soon</span>
+      </p>
+
+      <!-- ============ EDUCATION ============ -->
+      <section class="cv-section">
+        <h2>Education &amp; Research Experience</h2>
+
+        <div class="cv-entry">
+          <div class="cv-row">
+            <h3>University of Science and Technology of China (USTC)</h3>
+            <span class="date">2025 – 2029</span>
+          </div>
+          <p class="cv-sub">B.S. in Artificial Intelligence and Data Science, School of the Gifted Young</p>
+          <p class="cv-sub dim">GPA: 3.91 / 4.30 &middot; Hefei, China</p>
+          <ul>
+            <li><strong>Relevant coursework:</strong> Mathematical Analysis, Linear Algebra, Probability &amp; Statistics, Python Scientific Computing, C Programming, Fundamentals of Systems Programming</li>
+          </ul>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-row">
+            <h3>USTC Suzhou Institute for Advanced Research</h3>
+            <span class="date">Aug 2026</span>
+          </div>
+          <p class="cv-sub">Research Intern — Computational Materials Agent Routing &middot; Suzhou, China</p>
+          <ul>
+            <li>Designed and implemented an end-to-end agent routing system for natural-language <strong>VASP-based computational materials tasks</strong>, mapping user intents to downstream scientific-computing skills while validating execution parameters through a domain-specific Knowledge Graph.</li>
+            <li>Built a Python/SQLite retrieval pipeline with spelling correction, abbreviation expansion, stemming, BM25/IDF-weighted retrieval, and graph-based enhancement over a <strong>VASP Wiki</strong>–derived knowledge graph containing <strong>933 nodes</strong> and <strong>10,530 indexed terms</strong>.</li>
+            <li>Developed <strong>8 Python/Bash scripts</strong> for environment validation, dependency setup, knowledge-graph querying, and workflow orchestration; validated end-to-end execution on representative VASP tasks including Si and graphene.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section class="cv-section">
+        <h2>Selected Projects</h2>
+
+        <div class="cv-entry">
+          <div class="cv-row">
+            <h3>RoboGame — Robotics Competition</h3>
+            <span class="date">2026</span>
+          </div>
+          <p class="cv-sub">Team Lead, Perception &amp; Control</p>
+          <ul>
+            <li>Led perception and control development in a <strong>5-member robotics team</strong>, building a real-time pipeline from camera input to block localization for autonomous block collection and stacking.</li>
+            <li>Developed an OpenCV-based vision pipeline including white balance, gamma correction, HSV segmentation, binary morphology, geometric corner extraction, and <strong>PnP-based 3D localization</strong>; implemented camera-to-world coordinate transformations.</li>
+            <li>Designed the <strong>USART communication protocol</strong> between the Python upper computer and STM32 controller; current system performs block detection and world-coordinate estimation on the physical robot.</li>
+          </ul>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-row">
+            <h3>AI Hackathon Tour — AI Mock Interviewer</h3>
+            <span class="date">2026</span>
+          </div>
+          <p class="cv-sub">Team Lead / Backend Engineer — ModelScope Community &times; Datawhale</p>
+          <ul>
+            <li>Led backend development of an AI mock-interview system using FastAPI, asynchronous Python, LLMs, ASR/TTS, and RAG to simulate research-group interviews and generate structured candidate evaluations.</li>
+            <li>Redesigned the speech pipeline into parallel ASR &rarr; streaming LLM &rarr; parallel TTS with ordered playback, reducing observed worst-case first-response latency from <strong>~30s to &lt;2s</strong>.</li>
+            <li>Designed a structured evaluation framework across <strong>5 weighted dimensions</strong>; placed <strong>3rd in the USTC division</strong> and advanced to the <strong>national finals (5/30 teams)</strong>.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ AWARDS ============ -->
+      <section class="cv-section">
+        <h2>Awards &amp; Competitions</h2>
+        <div class="cv-entry">
+          <ul class="cv-cols">
+            <li><strong>AI Hackathon Tour</strong> — 3rd Place, USTC Division; National Finalist (5/30 teams), 2026</li>
+            <li><strong>National Physics Olympiad for Middle School Students</strong> — Guangdong Division, Provincial 3rd Prize, 2024</li>
+            <li><strong>National Mathematics Olympiad for Middle School Students</strong> — Guangdong Division, City 1st Prize; advanced to Provincial Round, 2024</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section class="cv-section">
+        <h2>Technical Skills</h2>
+        <div class="cv-entry">
+          <ul class="cv-cols">
+            <li><strong>Languages:</strong> Python, C, Bash, SQL, LaTeX</li>
+            <li><strong>AI / ML:</strong> PyTorch, LLMs, RAG, Agent Systems</li>
+            <li><strong>Scientific Computing:</strong> NumPy, SciPy, SQLite, VASP, pymatgen</li>
+            <li><strong>Computer Vision / Robotics:</strong> OpenCV, AprilTag, PnP, STM32, USART</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; 2026 Luo Hongsen &middot; Hefei, China</span>
+      <nav class="foot-nav">
+        <a href="mailto:jasonluohs@mail.ustc.edu.cn">Email</a>
+        <a href="https://github.com/jasonluohs" target="_blank" rel="noopener">GitHub</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
